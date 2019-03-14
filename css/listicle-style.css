@@ -54,34 +54,26 @@ section#photo {
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.main-body{
     padding-top: 60px;
-    width: 66.67%;
-    position:relative;
 }
 
-.number-container{
-    position:absolute;
-    right:100%;
-}
 
-.number{
-    position:absolute;
-    right:40px;
+.number{ 
+    position: absolute;
+    margin-left: -80px;
     font-family: 'Roboto Slab', serif;
     font-size: 36px;
     font-weight: bold;
     color:  rgba(0, 0, 0, 0.25);
 }
 
-.article{ 
-    margin-bottom: 120px; 
+.article{
+    width: 66%;
+    margin: auto;
+}
+
+.article-break{ 
+    height: 120px; 
 }
 
 .article-header{
@@ -99,7 +91,7 @@ section#photo {
     font-size: 18px;
 }
 
-.article a:hover{
+.article-header a:hover{
     text-decoration: underline;
 }
 
@@ -110,11 +102,10 @@ section#photo {
     color: rgb(51, 51, 51);
 }
 
-.partA, .partB{
-    margin-top: 20px;
+.paragraph-break{
+    height: 20px;
 }
 
 img{
-    width: 100%;
+    width:100%;
 }
-
