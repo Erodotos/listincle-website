@@ -91,7 +91,7 @@ section#photo {
     font-size: 18px;
 }
 
-.article-header a:hover{
+.article a:hover{
     text-decoration: underline;
 }
 
