@@ -12,6 +12,11 @@
 
 h1{
     font-family: 'Permanent Marker';
+    text-align: center;
+}
+
+h2{
+    text-align: center;
 }
 
 a{
@@ -26,7 +31,7 @@ a:hover{
 
 section#photo {
     height: 500px;
-    background-image: url(../images/myImages/top-bg.jpg);
+    background-image: url(../images/myImages/top-bg.png);
     background-size: initial;
     background-position: top;
     background-attachment: fixed;
@@ -75,6 +80,45 @@ section#photo {
     text-align: justify;
 }
 
+.collapsible {
+    background-color:orangered;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #42b4d6;
+}
+  
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.wallets{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wallets a{
+    margin-left: 10px;
+}
 
 
 footer{
@@ -83,12 +127,61 @@ footer{
 
 footer#photo {
     bottom: 0;
-    height: 500px;
+    height: 400px;
     background-image: url(../images/myImages/overview-bg.svg);
     background-size: cover;
 }
 
+#contact{
+    position: relative;
+	width: 780px;
+	margin: auto;
+	color: white;
+	font-size: 36px;;
+	text-align: center;
+    font-family: 'Permanent Marker';
+	top: 65%;
+}
 
+#creator{
+    position: relative;
+	width: 1000;
+	margin: auto;
+	color: white;
+	font-size: 26px;;
+	text-align: center;
+    font-family: 'Permanent Marker';
+    top: 80%;
+}
+
+#creator a{
+    text-decoration: underline;
+    color: white;
+}
+
+#creator a:hover{
+    font-size: 28px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    background-color: #555;
+}
        
 
 

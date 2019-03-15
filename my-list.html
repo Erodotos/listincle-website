@@ -6,18 +6,15 @@
   <title></title>
   <link rel="stylesheet" href="css/my-list-style.css" />
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Supermercado+One" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
 <body>
 
-  <!-- <div class="nav">
-    <div>
-      <a href="#how-it-works">How it works</a></li>
-      <a href="#get-started">Get started</a>
-      <a href="#bout">About</a>
-    </div>
-  </div> -->
+  <button onclick="topFunction()" id="myBtn">
+    <i class="fas fa-chevron-circle-up"></i>
+  </button>
 
   <section id="photo">
     <div id="title">
@@ -32,6 +29,8 @@
   <div class="container">
 
     <h1>Well ... What is bitcoin?</h1>
+    <div class="paragraph-break"></div>
+    <div class="paragraph-break"></div>
     <div class="left text text-justify">
       Bitcoin (₿) is a <a href="https://en.wikipedia.org/wiki/Cryptocurrency">cryptocurrency</a>, a form of electronic
       cash. It is a decentralized digital currency without a
@@ -60,48 +59,118 @@
 
   <div class="container">
 
-    <h1>Well ... What is bitcoin?</h1>
-    <div class="left text text-justify">
-      Bitcoin (₿) is a <a href="https://en.wikipedia.org/wiki/Cryptocurrency">cryptocurrency</a>, a form of electronic
-      cash. It is a decentralized digital currency without a
-      central bank or single administrator that can be sent from user to user on the <a
-        href="https://en.wikipedia.org/wiki/Peer-to-peer">peer-to-peer</a> bitcoin network
-      without the need for intermediaries.
-      <div class="paragraph-break"></div>
-      Transactions are verified by network nodes through cryptography and recorded in a public distributed ledger
-      called a <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>. Bitcoin was invented by an unknown
-      person or group of people using the name Satoshi
-      Nakamoto and released as open-source software in 2009. Bitcoins are created as a reward for a process
-      known as <a href="https://en.bitcoin.it/wiki/Mining">mining</a>. They can be exchanged for other currencies,
-      products, and services. Research produced by
-      the University of Cambridge estimates that in 2017, there were 2.9 to 5.8 million unique users using a
-      cryptocurrency wallet, most of them using bitcoin.
-    </div>
+    <h1>Get Started</h1>
+    <div class="text text-justify">
+      <p>To get started with Bitcoin all you need to have is unique address/wallet in order keep you coins.
+        You can add funds in your wallet either uy buing some bitcoins from a friend of yours (exchanging fiat money) or
+        you can aen some by entering the mining network.</p>
 
-    <div class="right">
-      <iframe width="480" height="360" src="https://www.youtube.com/embed/Gc2en3nHxA4" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h2>Type of wallets</h2>
+
+      <button class="collapsible text">Web based</button>
+      <div class="content">
+        <p>Web-clients are accessed through a web browser and store the users wallet on a server owned by a thrird
+          party. This is simillar to a webmail, in that it relies entirely on a third party server.Here are some
+          web-based wallet providers.</p>
+        <div class="wallets">
+          <span><a href="https://coin.space/?network=bitcoin">Coinspace</a></span>
+          <span><a href="https://wallet.btc.com">BTC.com</a></span>
+          <span><a href="https://www.bitgo.com/info/">BitGo</a></span>
+        </div>
+      </div>
+
+      <button class="collapsible text">Desktop</button>
+      <div class="content">
+        <ul>
+          <li>Full Client<br>
+            A full client, or “full node” is a client that stores the entire history of bitcoin trans‐
+            actions (every transaction by every user, ever), manages the user’s wallets and can
+            initiate transactions directly on the bitcoin network. This is similar to a standalone
+            email server, in that it handles all aspects of the protocol without relying on any
+            other servers or third party services.
+          </li>
+          <li>Light Client<br>
+            A lightweight client stores the user’s wallet but relies on third-party owned servers
+            for access to the bitcoin transactions and network. The light client does not store a
+            full copy of all transactions and therefore must trust the third party servers for
+            transaction validation. This is similar to a standalone email client that connects to
+            a mail server for access to a mailbox, in that it relies on a third party for interactions
+            with the network.
+          </li>
+        </ul>
+        <div class="wallets">
+          <span><a href="https://bitcoin.org/en/wallets/desktop/windows/bitcoincore/">Bitcoin Core</a></span>
+        </div>
+      </div>
+
+      <button class="collapsible text">Mobile</button>
+      <div class="content">
+        <p>Mobile clients for smartphones, such as those based on the Android system, can either
+          operate as full clients, light clients or web clients. Some mobile clients are synchronized
+          with a web or desktop client, providing a multi-platform wallet across multiple devices
+          but with a common source of funds.
+        </p>
+        <div class="wallets">
+          <span><a href="https://bitcoin.org/en/wallets/mobile/android/bitcoinwallet/">Bitcoin Android
+              Wallet</a></span>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="section-break"></div>
 
   </div>
 
 
-  <!-- <footer id="photo">
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    <div class="paragraph-break"></div>
-    
-  </footer> -->
+  <footer id="photo">
+    <div id="creator">
+      Website designed and developed by <a href="https://erodotos.github.io">Erodotos Demetriou</a> | Mar 2019
+    </div>
+
+  </footer>
 
 
 
 
 
 </body>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
+
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 
 </html>
