@@ -120,22 +120,67 @@
 
   <div class="section-break"></div>
 
+  <div class="container">
+
+    <h1>But ... wait ... Bitcoin is not the only E-Coin</h1>
+    <div class="text text-justify">
+      <p>There are other cryptocurrencies as well. Bitcoin is a first generation cryptocurrency but in 2019 we have
+        third generation cryptocurrencies. Below you can findout more about each generation.</p>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">1st Generation</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">2nd Generation</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">3rd Generation</button>
+      </div>
+
+      <div id="London" class="tabcontent">
+        <h3>1st Generation Cryptocurrencies (2009–2014)</h3>
+        <ul>
+          <li>Different algorithms (Ethash, Scrypt, X11, etc)</li>
+          <li>Different proof types (PoS, PoW/PoS hybrids, DPoS, PoT)</li>
+          <li>Different distribution methods (Mining, minting, masternodes, airdrops, ICOs, ITOs)</li>
+          <li>Increased built-in anonymity & privacy functions (XMR, DASH, ZEC, PART, etc)</li>
+        </ul>
+      </div>
+
+      <div id="Paris" class="tabcontent">
+        <h3>2nd Generation Cryptocurrencies (2014–2018)</h3>
+        <ul>
+          <li>Smart contract platforms (ETH, ETC, STRAT, UBQ, EXP, LSK, XLM, EOS, etc)</li>
+          <li>Different network topologies: DAG (IOTA, GBYTE), Block-lattice (NANO)</li>
+          <li>Maturing decentralized exchanges & protocols (OpenLedger, ZRX, BLOCK, WAVES, EtherDelta, RuDEX, IDEX,
+            Tidex, RadarRelay, Atomic Swaps, etc) and marketplaces (DNT, BNTY, PART)</li>
+          <li>First stablecoin experiments (USDT, DAI, Basecoin)</li>
+        </ul>
+      </div>
+
+      <div id="Tokyo" class="tabcontent">
+        <h3>3nd Generation Cryptocurrencies (2018–)</h3>
+        <ul>
+          <li>Highly scalable, fast, cheap to transact, secure (as much as PoW-based bitcoin), and lightweight
+            cryptocurrencies</li>
+          <li>More intricate anonymous and private coins/assets and marketplaces for niche groups</li>
+          <li>Dynamic and decentralized supply-adjusting cryptocurrencies, with the supply of new coins being pegged to
+            live demand, preventing both inflation and deflation from ocurring (incentive-based or AI managed)</li>
+        </ul>
+      </div>
+
+
+    </div>
   </div>
 
+  <div class="section-break"></div>
 
   <footer id="photo">
     <div id="creator">
       Website designed and developed by <a href="https://erodotos.github.io">Erodotos Demetriou</a> | Mar 2019
     </div>
-
   </footer>
-
-
-
-
 
 </body>
 
+
+<!-- Collapse script -->
 <script>
   var coll = document.getElementsByClassName("collapsible");
   var i;
@@ -153,7 +198,7 @@
   }
 </script>
 
-
+<!-- Top button Script -->
 <script>
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () { scrollFunction() };
@@ -171,6 +216,26 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+</script>
+
+<!-- Tabed menu Script -->
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
 </script>
 
 </html>
